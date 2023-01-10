@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: my-project
-        image: prashulava/my-project-image
+        image: prashulava/my-project
         ports:
         - containerPort: 8080
 ---
