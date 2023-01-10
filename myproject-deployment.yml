@@ -30,5 +30,20 @@ spec:
         image: my-project-image:latest
         ports:
         - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-project-service
+spec:
+  selector:
+    app: my-project
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      nodePort: 30080
+  type: NodePort
+
 
 
